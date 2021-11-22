@@ -1,0 +1,98 @@
+cli command line interface
+gui graphic user interface
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+▼ 비주얼스튜디오코드 jsx 자동완성 설정
+  ▶ 환경설정(ctrl+,) 상단오른쪽의 Json수정버튼 클릭
+  ▶ setting.json 하단의 옵션 추가
+  "emmet.includeLanguages":{
+      "javascript":"javascriptreact"
+  }
+▼ 비주얼스튜디오코드 터미널을 powershell대신 cmd로 대체할 경우
+  ▶ 환경설정(ctrl+,) 상단오른쪽의 Json수정버튼 클릭
+    setting.json파일에 하단의 내용추가
+  ▶ setting.json 하단의 옵션 추가
+    "terminal.integrated.shell.windows":"cmd.exe" 
+
+▼ 비주얼스튜디오코드 익스텐션    
+  Reactjs code snippets
+  Auto Import
+
+▼ 비주얼스튜디오코드 터미널 변경하기
+  상단 탭 메뉴에서 터미널(terminal) 실행
+  하단 터미널 패널 '∨' 를 클릭 후 기본 프로필 선택
+  cmd 선택
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+▼ 크롬 확장프로그램
+  ▶ 크롬웹스토어
+    ▽ React Developer Tool
+      https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=en
+    ▽ Redux DevTools
+  ▶ 설치 후 크롬 설정(상단우측버튼)
+    도구더보기/확장프로그램/React Developer Tools 세부정보/파일 URL에 대한 액세스 허용 체크 후 재부팅
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+▼ node js 설치 (자바스크립트 라이브러리 설치 및 실행)
+  ▶ node js 터미널 버전확인 명령어
+    node -v
+    npm -v
+(설치 후 cmd로 확인)
+▼ yarn 설치
+  npm install --global yarn
+  ▶ yarn 명령어
+    yarn --version
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+▼ cdn (webpack, create-react-app 사용시 필요없음)
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  (crossorigin속성 : 호스트 외부 호출, 에러출력 )
+/////////////////////////////////////////////////////////////////////////////////////////////////////  
+▼제이쿼리
+  ▷ 컴퍼넌트 내부스크립트 사용
+    npm install jquery
+
+    import jquery from "jquery";
+    import $ from "jquery";
+
+    useEffect(()=>{
+      jquery code ...
+    })
+  ▷ 외부 스크립트 사용
+    - index파일에 script 연동
+    - 외부스크립트 생성 (예: js/script.js)
+    useEffect(()=>{
+      const script = document.createElement('script');
+      script.src = "./js/script.js";
+      script.async = true;
+      document.body.appendChild(script); 
+    })
+/////////////////////////////////////////////////////////////////////////////////////////////////////    
+▼ 외부파일 호출하기
+  import로 모듈을 불러오는 경우 사용하지 않는 코드들은 웹팩의 tree shaking에 의해 빌드 시 제거됨. 
+  결과적으로 코드량이 줄어들고 성능적으로 우수해짐.
+  ▷ 일반적인 사용법
+    public폴더안에 css및 img폴더를 생성하고 index.html기준으로 파일을 연동
+  ▷ require 예시
+    <img src={require("./img.jpg")}/>
+  ▷ import 예시
+    import imgfile from './imgfile.png';
+    <img src={imgfile} /> 
+  ▷ css
+    ▽ 기본사용법
+      import './css/style.css';
+    ▽ css 변수형 호출
+      import myStyle from './css/style.css';
+      <div className={myStyle.box}>
+/////////////////////////////////////////////////////////////////////////////////////////////////////    
+▼ PostCSS
+  ▷ css파일제작
+    css파일명 앞에 moudle확장자 추가 ex: style.module.css
+  ▷ css호출
+    import styles from './style.module.css';
+  ▷ css 적용
+    <div className={styles.button}>
+
+
+
+
+
