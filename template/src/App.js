@@ -1,8 +1,8 @@
-App = ()=>{
+const App = ()=>{
   return (
     <>
-      app template
-      
+      app template...
+      jsx
     </>
   );
 }
