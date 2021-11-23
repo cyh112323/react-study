@@ -1,0 +1,31 @@
+■ 프레임워크란
+  - 자바스크립트만 활용하여 컴포넌트 구조를 설계할 수 있다
+  - 비동기 데이터 수신이 가능하다
+  - 데이터 변화를 감지하여 뷰가 갱신된다
+
+■ spa (single page app)
+  * 여러페이지처럼 보이는데 사실은 한 페이지로 구성됨
+    - 페이지 이동시 시간이 걸리지 않는다
+    - 설계가 어렵다
+
+■ pwa (progressive wep app)
+  - html ,css, js로 앱을 설계할 수 있음
+
+■ 개발환경 구축 
+  - NodeJs (자바스크립트 라이브러리 관리)
+  - NPM (자바스크립트 설치 및 실행)
+  - create-react-app (리액트 개발환경 구축)
+  - barbel, webpack 
+
+■ jsx 문법
+  - html 유사구조를 이용하여 스크립트 문법을 작성할 수 있다
+  - barbel 라이브러리가 설치되어 있어야 함
+  - return 안쪽의 객체가 컴포넌트로 구성됨
+  - return 안쪽의 html구조는 한개의 부모객체로 감싸야한다
+  - return 안쪽에서는 if,for등의 일반 스크립트는 작성할 수 없음
+  - xml 문법을 따른다. 단독객체는 닫기를 해야함 <input />
+  - className, defultValue, onClick
+
+■ 리액트 문법
+  * class문법
+  * hooks 문법 (함수형태)
