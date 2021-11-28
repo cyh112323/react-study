@@ -8,7 +8,7 @@
     - 페이지 이동시 시간이 걸리지 않는다
     - 설계가 어렵다
 
-■ pwa (progressive wep app)
+■ pwa (progressive wep app)  
   - html ,css, js로 앱을 설계할 수 있음
 
 ■ 개발환경 구축 
