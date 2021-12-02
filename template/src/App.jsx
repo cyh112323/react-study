@@ -1,44 +1,24 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
+import CompOutput from './components/CompOutput';
+
 
 const App = () => {
-  const [_arr, _setArr] = useState([])
-  const refInput1 = useRef()
-  const refInput2 = useRef()
-  const fnAdd = () => {
-    let name = refInput1.current.value
-    let id = Date.now()
-    let obj = {
-      name,
-      id
-    }
-    refInput1.current.value = ""
-    _setArr([..._arr, obj])
-  }//fnAdd
-  const fnRemove = () => {
-    let name = refInput2.current.value
-    let arr = _arr.filter((v) => {
-      return v.name !== name
-    })
-    _setArr(arr)
+  const [_n,_setn] = useState(1)
+
+  const fn =(e)=>{
+    let n = _n
+    let increase = parseInt(e.target.getAttribute('data-increase'))
+    _setn(n + increase)
   }
   return (
     <>
-      <p>이름을 추가하거나 제거하면 목록이 li객체로 출력됩니다</p>
-      <input ref={refInput1} type="text" /> &nbsp;
-      <button onClick={fnAdd}>추가</button>
-      <br />
-      <input ref={refInput2} type="text" /> &nbsp;
-      <button onClick={fnRemove} >제거</button>
+      <p>버튼을 클릭하면 증감연산이 됩니다</p>
       <hr />
-      <ul>
-        {
-          _arr.map((v) => {
-            return (
-              <li key={v.id}>{v.name}</li>
-            )
-          })
-        }
-      </ul>
+      <CompOutput prop_n={_n}/>
+      <hr />
+      <button data-increase='-1' onClick={fn}>1감소</button>
+      <button data-increase='1' onClick={fn}>1증가</button>
+
     </>
   );
 };
