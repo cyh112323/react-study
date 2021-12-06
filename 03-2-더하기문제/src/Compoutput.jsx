@@ -1,9 +1,11 @@
 import React from 'react';
 
-const CompOutput = ({prop_n}) => {
+const CompOutput = ({_num}) => {
   return (
     <>
-      <p>{prop_n}</p>
+      <hr />
+      <p>{_num}</p>
+      <hr />
     </>
   );
 };

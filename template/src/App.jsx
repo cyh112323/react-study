@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
-import CompOutput from './components/CompOutput';
-
+import Comp1 from './Comp1';
+import Comp2 from './Comp2';
 
 const App = () => {
-  const [_n,_setn] = useState(1)
-
-  const fn =(e)=>{
-    let n = _n
-    let increase = parseInt(e.target.getAttribute('data-increase'))
-    _setn(n + increase)
-  }
+  const [_init, _setInit] = useState('comp1')
+  const [_num, _setNum] = useState(null)
   return (
     <>
-      <p>버튼을 클릭하면 증감연산이 됩니다</p>
-      <hr />
-      <CompOutput prop_n={_n}/>
-      <hr />
-      <button data-increase='-1' onClick={fn}>1감소</button>
-      <button data-increase='1' onClick={fn}>1증가</button>
+      {
+        (_init === 'comp1')?<Comp1 _num={_num} _setNum={_setNum}/>:<Comp2/> //삼항연산자
+      }
 
     </>
   );
