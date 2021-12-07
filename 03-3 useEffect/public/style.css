@@ -1,0 +1,10 @@
+body{
+  background: #eee;
+}
+.comp1,.comp2{
+  opacity: 0;
+  transition: opacity 2s;
+}
+.comp1.active,.comp2.active{
+  opacity: 1;
+}
