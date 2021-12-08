@@ -1,0 +1,19 @@
+■ router
+  ● spw(single page web)을 구입한다
+  ● 설치
+    npm install react-router-dom --save
+  ● 삭제
+    npm uninstall react-router-dom
+  ● 구조
+    <BrowserRouter> //라우터를 사용할 수 있도록 전체 앱을 감싼다
+      <CompHeader />
+        <Routes> //주소에 따라 변경되는 컴퍼넌트를 포함시킨다
+          <Route path="/" element={<CompHome />} />
+          <Route path="about" element={<CompAbout />} /> //주소에 about 이 출력되는 <CompAbout />컴포넌트를 출력한다
+          <Route path="portfolio" element={<CompPortfolio /> } />
+        </Routes>
+      <CompFooter />
+    </BrowserRouter>
+
+  ● 네비게이트 구조
+  <Link to="/">home</Link> //출력시에는 a 로 출력됨
