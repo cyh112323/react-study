@@ -1,0 +1,149 @@
+body {
+  background-image: url(../img/paper.jpg);
+  background-size: cover;
+}
+
+div#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 600px;
+  box-sizing: border-box;
+  padding: 50px 35px;
+  background-image: url(../img/bg.png);
+  background-size: 100% 100%;
+}
+
+main h1 {
+  position: absolute;
+  width: 50%;
+  left: 26%;
+  top: 5%;
+}
+
+main h1 img {
+  display: block;
+  width: 100%;
+  mix-blend-mode: overlay;
+}
+
+div.output {
+  position: relative;
+  width: 100%;
+  height: 45%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+div.output div.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  box-sizing: border-box;
+  left: 7%;
+  top: 26%;
+  width: 86%;
+  height: 65%;
+}
+
+div.output div.inner img {
+  width: 8%;
+}
+
+div.output::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../img/output.png);
+  background-size: 100% 100%;
+}
+
+form.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  flex: 1;
+  pointer-events: none;
+}
+
+form.btnContainer:active button {
+  opacity: 0.7;
+  transform: scale(0.8);
+}
+
+form.btnContainer button {
+  outline: none;
+  pointer-events: fill;
+  width: 25%;
+  transition: all 0.05s;
+}
+
+form.btnContainer button.clear {
+  background-color: red;
+  color: #fff;
+}
+
+form.btnContainer button.delete {
+  background-color: black;
+  color: #fff;
+}
+
+form.btnContainer button.calc {
+  background-color: orange;
+  color: #fff;
+}
+
+form.btnContainer button:active {
+  transform: scale(1.7);
+  z-index: 1;
+  opacity: 1;
+}
+
+form.btnContainer button:first-child img {
+  width: 60%;
+  max-width: 50px;
+}
+
+form.btnContainer button img {
+  width: 35%;
+  max-width: 25px;
+  mix-blend-mode: multiply;
+}
+
+div.sorry, div.err {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  left: 0%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+div.sorry img, div.err img {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 600px;
+  animation: rubberBand 1s;
+}

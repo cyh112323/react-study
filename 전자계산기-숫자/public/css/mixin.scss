@@ -1,0 +1,27 @@
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin hidden {
+  position: fixed;
+  left: -1000000px;
+}
+
+@mixin icon($selector, $code) {
+  &::#{$selector} {
+    /* 변수 이어붙이기 */
+    content: $code;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+}

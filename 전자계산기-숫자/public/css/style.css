@@ -1,0 +1,27 @@
+:root {
+  --theme-color: #0bcbbf;
+}
+
+main{display: inline;}/* 100%레이아웃설정 */
+
+.content_width {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 800px) {
+  .padding_v {padding: 70px 0;}
+}
+@media screen and (max-width: 800px) {
+  .padding_v {padding: 40px 0;}
+}
+
+body {
+  font-family: "Raleway", "Noto Sans KR", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  color: #666;
+}
+
+
